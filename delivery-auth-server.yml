@@ -22,7 +22,7 @@ security:
             authorized-grant-types: password,refresh_token 
             client-id: coderef # Identificador único que será usado pelo Client para solicitar concessão de acesso
             # [client-secret] Uma senha usada em conjunto com o client-id como autenticação básica do client que está tentando obter um token de acesso.
-            client-secret: $2a$10$p9Pk0fQNAQSesI4vuvKA0OZanDD2 
+            client-secret: $2a$10$SHRRricwBo.ywjiClXikY.0QfZ2WkYX9NnWXnqCv7G0maQp8XTiou 
             resource-ids: resources # Identificador dos recursos disponíveis, se especificado aqui também deve ser especificado no servidor de recursos.
             scope: read,write # Os escopos que o Client terá acesso.
 
