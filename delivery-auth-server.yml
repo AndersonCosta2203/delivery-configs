@@ -30,7 +30,7 @@ spring:
     datasource:
         data: classpath:/sql/data.sql # Um arquivo .sql que será executado na inicialização da aplicação, ele será executado após a propriedade schema.
         driver-class-name: com.mysql.jdbc.Driver # Classe do driver JDBC.
-        password: '1234' # Senha de acesso ao banco de dados.
+        password: 'root' # Senha de acesso ao banco de dados.
         platform: mysql # Plataforma de persistência.
         # [schema] Arquivo com a estrutura do banco de dados. Como as classes que mapeiam os dados de segurança então nas bibliotecas do Spring, 
         #  elas não são criadas automaticamente pelo JPA.
