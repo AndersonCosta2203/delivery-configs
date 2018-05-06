@@ -53,5 +53,5 @@ spring:
         hibernate:
         # Caso a propriedade generate-ddl esteja marcada como true, aqui deverá ser informada qual a política de geração do schema do banco de dados.
             ddl-auto: create-drop
-            dialect: org.hibernate.dialect.MySQL5Dialect
+            dialect: org.hibernate.dialect.MySQL5InnoDBDialect
         show-sql: true # Se habilitada, será gerado um log com o sql gerado pelo JPA. Use somente em Homologação.
