@@ -25,6 +25,9 @@ security:
             client-secret: $2a$10$SHRRricwBo.ywjiClXikY.0QfZ2WkYX9NnWXnqCv7G0maQp8XTiou 
             resource-ids: resources # Identificador dos recursos disponíveis, se especificado aqui também deve ser especificado no servidor de recursos.
             scope: read,write # Os escopos que o Client terá acesso.
+logging:
+  level:
+    org.springframework.security: DEBUG
 
 spring:
     datasource:
