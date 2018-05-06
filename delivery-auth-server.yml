@@ -25,6 +25,8 @@ security:
             client-secret: $2a$10$SHRRricwBo.ywjiClXikY.0QfZ2WkYX9NnWXnqCv7G0maQp8XTiou 
             resource-ids: resources # Identificador dos recursos disponíveis, se especificado aqui também deve ser especificado no servidor de recursos.
             scope: read,write # Os escopos que o Client terá acesso.
+        resource:
+            filter-order: 3
 logging:
   level:
     org.springframework.security: DEBUG
@@ -33,13 +35,14 @@ spring:
     datasource:
         data: classpath:/sql/data.sql # Um arquivo .sql que será executado na inicialização da aplicação, ele será executado após a propriedade schema.
         driver-class-name: com.mysql.jdbc.Driver # Classe do driver JDBC.
-        password: 'root' # Senha de acesso ao banco de dados.
         platform: mysql # Plataforma de persistência.
         # [schema] Arquivo com a estrutura do banco de dados. Como as classes que mapeiam os dados de segurança então nas bibliotecas do Spring, 
         #  elas não são criadas automaticamente pelo JPA.
         schema: classpath:/sql/schema.sql
         url: jdbc:mysql://localhost/oauth?verifyServerCertificate=false&useSSL=false&requireSSL=false # Url de acesso ao banco de dados.
         username: root # Usuário de acesso ao banco de dados.
+        password: 'root' # Senha de acesso ao banco de dados.
+
     jpa:
         # [database-platform] Classe que possui a implementação que possibilita a geração SQL para a plataforma de persistência especificada, 
         #  para que todo o SQL gerado pelo JPA seja compatível com o banco de dados escolhido.
