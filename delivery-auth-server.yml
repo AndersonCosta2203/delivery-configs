@@ -27,33 +27,3 @@ security:
             scope: read,write # Os escopos que o Client terá acesso.
         resource:
             filter-order: 3
-logging:
-  level:
-    org.springframework.security: DEBUG
-    org.springframework: DEBUG
-    org.hibernate: DEBUG
-
-spring:
-    datasource:
-        data: classpath:/sql/data.sql # Um arquivo .sql que será executado na inicialização da aplicação, ele será executado após a propriedade schema.
-        driver-class-name: com.mysql.jdbc.Driver # Classe do driver JDBC.
-        platform: mysql # Plataforma de persistência.
-        # [schema] Arquivo com a estrutura do banco de dados. Como as classes que mapeiam os dados de segurança então nas bibliotecas do Spring, 
-        #  elas não são criadas automaticamente pelo JPA.
-        schema: classpath:/sql/schema.sql
-        url: jdbc:mysql://localhost/oauth?verifyServerCertificate=false&useSSL=false&requireSSL=false # Url de acesso ao banco de dados.
-        username: root # Usuário de acesso ao banco de dados.
-        password: 'root' # Senha de acesso ao banco de dados.
-        initialize: true
-
-    jpa:
-        # [database-platform] Classe que possui a implementação que possibilita a geração SQL para a plataforma de persistência especificada, 
-        #  para que todo o SQL gerado pelo JPA seja compatível com o banco de dados escolhido.
-        database-platform: org.hibernate.dialect.MySQLDialect
-        # [generate-ddl] Informar se durante a inicialização será necessário gerar as estruturas do banco de dados com base nas anotações JPA.
-        generate-ddl: true
-        hibernate:
-        # Caso a propriedade generate-ddl esteja marcada como true, aqui deverá ser informada qual a política de geração do schema do banco de dados.
-            ddl-auto: update
-        # dialect org.hibernate.dialect.MySQL5Dialect
-        show-sql: true # Se habilitada, será gerado um log com o sql gerado pelo JPA. Use somente em Homologação.
