@@ -42,14 +42,15 @@ spring:
         url: jdbc:mysql://localhost/oauth?verifyServerCertificate=false&useSSL=false&requireSSL=false # Url de acesso ao banco de dados.
         username: root # Usuário de acesso ao banco de dados.
         password: 'root' # Senha de acesso ao banco de dados.
+        initialize: true
 
     jpa:
         # [database-platform] Classe que possui a implementação que possibilita a geração SQL para a plataforma de persistência especificada, 
         #  para que todo o SQL gerado pelo JPA seja compatível com o banco de dados escolhido.
         database-platform: org.hibernate.dialect.MySQLDialect
         # [generate-ddl] Informar se durante a inicialização será necessário gerar as estruturas do banco de dados com base nas anotações JPA.
-        generate-ddl: false
+        generate-ddl: true
         hibernate:
         # Caso a propriedade generate-ddl esteja marcada como true, aqui deverá ser informada qual a política de geração do schema do banco de dados.
-            ddl-auto: none
+            ddl-auto: create-drop
         show-sql: true # Se habilitada, será gerado um log com o sql gerado pelo JPA. Use somente em Homologação.
